@@ -19,7 +19,7 @@ public class controller : MonoBehaviour {
         float y = 0;
        
             
-        if(Input.GetKeyDown("space") && Mathf.Abs(rb.position.y - floor.transform.position.y) < .5) 
+        if(Input.GetKeyDown("space") && Mathf.Abs(rb.position.y - floor.transform.position.y) < 1.1) 
         {
 
             rb.velocity = new Vector2(x, jumpHeight);
@@ -28,15 +28,24 @@ public class controller : MonoBehaviour {
 
         this.transform.rotation = new Quaternion(0, 0, 0, 1);
 
-        if (x < 0)
+        transform.Translate(x, y, 0);
+
+        if(Input.GetKeyDown("left") && this.transform.localScale.x > 0)
         {
-            transform.Translate(x, y, 0);
-            transform.Rotate(0, 180, 0);
+            this.Flip();
         }
-        
-        else
+
+        if (Input.GetKeyDown("right") && this.transform.localScale.x < 0)
         {
-            transform.Translate(x, y, 0);
+            this.Flip();
         }
-	}
+
+    }
+
+    void Flip()
+    {
+        Vector3 theScale = transform.localScale;
+        theScale.x *= -1;
+        transform.localScale = theScale;
+    }
 }

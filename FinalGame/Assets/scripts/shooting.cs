@@ -17,19 +17,22 @@ public class shooting : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
         if(Input.GetKeyDown(KeyCode.Z) && canShoot)
         {
-           GameObject go = Instantiate(bullet, (Vector2)transform.position + offset * transform.localScale.x, 
-                Quaternion.identity);
+          
+                GameObject go = Instantiate(bullet, (Vector2)transform.position + offset * transform.localScale.x,
+                     Quaternion.identity);
 
-            go.GetComponent<Rigidbody2D>().velocity = new Vector2(vel.x * transform.localScale.x , vel.y);
-            StartCoroutine(CanShoot());
+                go.GetComponent<Rigidbody2D>().velocity = new Vector2(vel.x * transform.localScale.x, vel.y);
+                StartCoroutine(CanShoot());
 
-
+           
         }
 
+        
 	}
+
+
 
     IEnumerator CanShoot()
     {
