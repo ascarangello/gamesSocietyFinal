@@ -204,6 +204,7 @@ GameObject:
   - component: {fileID: 695896708}
   - component: {fileID: 695896707}
   - component: {fileID: 695896711}
+  - component: {fileID: 695896712}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -314,8 +315,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e5501f3a746cb241b4383f01740f857, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rb: {fileID: 0}
   floor: {fileID: 1185923570}
+  speed: 7
+  jumpHeight: 5
+--- !u!114 &695896712
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 695896706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0a181dd88b99994ea96ee578fc36ee4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bullet: {fileID: 1935077422711484, guid: edce486f5c14da540a74848d58ad8a83, type: 2}
+  vel: {x: 10, y: 0}
+  offset: {x: 0.2, y: 0.1}
+  cooldown: 0.25
 --- !u!1 &1185923570
 GameObject:
   m_ObjectHideFlags: 0
