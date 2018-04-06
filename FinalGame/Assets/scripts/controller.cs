@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class controller : MonoBehaviour {
     private Rigidbody2D rb;
+    Animator animate;
     public GameObject floor;
     public float speed;
     public float jumpHeight;
@@ -11,6 +12,7 @@ public class controller : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         rb = GetComponent<Rigidbody2D>();
+        animate = gameObject.GetComponent<Animator>();
 	}
 
     // Update is called once per frame
@@ -27,6 +29,15 @@ public class controller : MonoBehaviour {
         }
 
         this.transform.rotation = new Quaternion(0, 0, 0, 1);
+
+        if(x != 0)
+        {
+            animate.SetBool("isWalking", true);
+        }
+        else
+        {
+            animate.SetBool("isWalking", false);
+        }
 
         transform.Translate(x, y, 0);
 
