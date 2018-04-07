@@ -19,8 +19,8 @@ public class shooting : MonoBehaviour {
 	void Update () {
         if(Input.GetKeyDown(KeyCode.Z) && canShoot)
         {
-          
-                GameObject go = Instantiate(bullet, (Vector2)transform.position + offset * transform.localScale.x,
+            Vector2 bullVector = new Vector2(transform.position.x + offset.x * transform.localScale.x, transform.position.y + offset.y);
+                GameObject go = Instantiate(bullet, bullVector,
                      Quaternion.identity);
 
                 go.GetComponent<Rigidbody2D>().velocity = new Vector2(vel.x * transform.localScale.x, vel.y);
