@@ -22,6 +22,7 @@ public class flight : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
         if (Time.time >= tChange)
         {
             randomX = Random.Range(-2.0f, 2.0f); // with float parameters, a random float
