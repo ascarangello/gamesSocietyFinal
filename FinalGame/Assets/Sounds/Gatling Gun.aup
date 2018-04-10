@@ -1,0 +1,72 @@
+<?xml version="1.0" standalone="no" ?>
+<!DOCTYPE project PUBLIC "-//audacityproject-1.3.0//DTD//EN" "http://audacity.sourceforge.net/xml/audacityproject-1.3.0.dtd" >
+<project xmlns="http://audacity.sourceforge.net/xml/" projname="Gatling Gun_data" version="1.3.0" audacityversion="2.2.2" sel0="0.0000000000" sel1="0.0000000000" vpos="0" h="0.0000000000" zoom="32.5402535781" rate="44100.0" snapto="off" selectionformat="seconds" frequencyformat="Hz" bandwidthformat="octaves">
+	<tags>
+		<tag name="Software" value="Lavf57.19.100"/>
+		<tag name="major_brand" value="mp42"/>
+		<tag name="minor_version" value="0"/>
+		<tag name="compatible_brands" value="isommp42"/>
+	</tags>
+	<wavetrack name="Gatling Gun SOUND EFFECT" channel="0" linked="1" mute="0" solo="0" height="150" minimized="0" isSelected="1" rate="44100" gain="1.0" pan="0.0" colorindex="0">
+		<waveclip offset="0.00000000" colorindex="0">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="1851264">
+				<waveblock start="0">
+					<simpleblockfile filename="e08087ea.au" len="262144" min="-1.006907" max="0.853376" rms="0.116468"/>
+				</waveblock>
+				<waveblock start="262144">
+					<simpleblockfile filename="e0808b45.au" len="262144" min="-0.984493" max="0.850344" rms="0.132118"/>
+				</waveblock>
+				<waveblock start="524288">
+					<simpleblockfile filename="e0808812.au" len="262144" min="-0.976373" max="0.905805" rms="0.101767"/>
+				</waveblock>
+				<waveblock start="786432">
+					<simpleblockfile filename="e0808b6e.au" len="262144" min="-0.858997" max="0.904465" rms="0.055575"/>
+				</waveblock>
+				<waveblock start="1048576">
+					<simpleblockfile filename="e0808e8f.au" len="262144" min="-0.907122" max="0.926456" rms="0.068007"/>
+				</waveblock>
+				<waveblock start="1310720">
+					<simpleblockfile filename="e0808470.au" len="262144" min="-0.946717" max="0.919618" rms="0.081707"/>
+				</waveblock>
+				<waveblock start="1572864">
+					<simpleblockfile filename="e0808d39.au" len="262144" min="-0.863884" max="0.923041" rms="0.064111"/>
+				</waveblock>
+				<waveblock start="1835008">
+					<simpleblockfile filename="e0808dd3.au" len="16256" min="0.0" max="0.0" rms="0.0"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+	</wavetrack>
+	<wavetrack name="Gatling Gun SOUND EFFECT" channel="1" linked="0" mute="0" solo="0" height="150" minimized="0" isSelected="1" rate="44100" gain="1.0" pan="0.0" colorindex="0">
+		<waveclip offset="0.00000000" colorindex="0">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="1851264">
+				<waveblock start="0">
+					<simpleblockfile filename="e0808a15.au" len="262144" min="-1.006907" max="0.853376" rms="0.116468"/>
+				</waveblock>
+				<waveblock start="262144">
+					<simpleblockfile filename="e0808158.au" len="262144" min="-0.984493" max="0.850344" rms="0.132118"/>
+				</waveblock>
+				<waveblock start="524288">
+					<simpleblockfile filename="e0808f74.au" len="262144" min="-0.976373" max="0.914013" rms="0.105742"/>
+				</waveblock>
+				<waveblock start="786432">
+					<simpleblockfile filename="e0808ab2.au" len="262144" min="-0.935486" max="0.894626" rms="0.0591"/>
+				</waveblock>
+				<waveblock start="1048576">
+					<simpleblockfile filename="e0808444.au" len="262144" min="-0.928314" max="0.937326" rms="0.076115"/>
+				</waveblock>
+				<waveblock start="1310720">
+					<simpleblockfile filename="e080887e.au" len="262144" min="-0.925432" max="0.95473" rms="0.091107"/>
+				</waveblock>
+				<waveblock start="1572864">
+					<simpleblockfile filename="e0808880.au" len="262144" min="-0.971636" max="0.936423" rms="0.070444"/>
+				</waveblock>
+				<waveblock start="1835008">
+					<simpleblockfile filename="e08085b9.au" len="16256" min="0.0" max="0.0" rms="0.0"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+	</wavetrack>
+</project>
