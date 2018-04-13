@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class getHit : MonoBehaviour {
     public GameObject bullet;
-
 	// Use this for initialization
 	void Start () {
 	}
@@ -18,8 +17,9 @@ public class getHit : MonoBehaviour {
     {
         if(collision.gameObject.name == "bullet 1(Clone)")
         {
-			soundsplease.PlaySound ("angry duck death");
+            soundsplease.PlaySound ("angry duck death");
             GameObject.Destroy(gameObject);
+            
         }
     }
 }

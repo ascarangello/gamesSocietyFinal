@@ -9,6 +9,9 @@ public class randomSpawn : MonoBehaviour {
     public float minY = -2.5f;
     private float currTime;
     private float spawnTime;
+    public int numSpawned;
+    private bool canSpawn;
+    public int maxToSpawn;
     public GameObject toBeSpawned;
    
 
@@ -16,18 +19,23 @@ public class randomSpawn : MonoBehaviour {
     void Start () {
         SetRandomTime();
         currTime = min;
+        canSpawn = true;
+        numSpawned = GameObject.FindGameObjectsWithTag("Duck").Length;
 	}
-	
-	// Update is called once per frame
-	void Update () {
+
+    // Update is called once per frame
+    void Update()
+    {
+        numSpawned = GameObject.FindGameObjectsWithTag("Duck").Length;
+        this.checkSpawn();
         currTime += Time.deltaTime;
-        if(currTime >= spawnTime)
+        if (currTime >= spawnTime && canSpawn)
         {
             SpawnObject();
             SetRandomTime();
         }
 
-	}
+    }
 
     void SpawnObject()
     {
@@ -38,5 +46,17 @@ public class randomSpawn : MonoBehaviour {
     void SetRandomTime()
     {
         spawnTime = Random.Range(min, max);
+    }
+
+    void checkSpawn()
+    {
+        if(numSpawned >= maxToSpawn)
+        {
+            canSpawn = false;
+        }
+        else
+        {
+            canSpawn = true;
+        }
     }
 }
