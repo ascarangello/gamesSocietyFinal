@@ -25,7 +25,6 @@ GameObject:
   - component: {fileID: 61369377807351714}
   - component: {fileID: 114379503962129918}
   - component: {fileID: 114478592746730022}
-  - component: {fileID: 114011000433607808}
   - component: {fileID: 82398247033270388}
   m_Layer: 0
   m_Name: basicDuck_0
@@ -189,17 +188,6 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114011000433607808
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1768652806446990}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2932e3e0c490cff4d9b6d47f919e616e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114379503962129918
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -216,6 +204,7 @@ MonoBehaviour:
   minY: -2.82
   maxY: 2.87
   speed: 1
+  player: {fileID: 0}
 --- !u!114 &114478592746730022
 MonoBehaviour:
   m_ObjectHideFlags: 1
