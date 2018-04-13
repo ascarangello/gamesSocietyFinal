@@ -20,6 +20,7 @@ public class shooting : MonoBehaviour {
 	void Update () {
         if(Input.GetKeyDown(KeyCode.Z) && canShoot)
         {
+			soundsplease.PlaySound ("HUnting Rifle");
             animate.SetTrigger("isShooting");
             Vector2 bullVector = new Vector2(transform.position.x + offset.x * transform.localScale.x, transform.position.y + offset.y);
                 GameObject go = Instantiate(bullet, bullVector,

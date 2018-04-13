@@ -26,8 +26,7 @@ GameObject:
   - component: {fileID: 114379503962129918}
   - component: {fileID: 114478592746730022}
   - component: {fileID: 114011000433607808}
-  - component: {fileID: 82315533146955282}
-  - component: {fileID: 114672238711114428}
+  - component: {fileID: 82398247033270388}
   m_Layer: 0
   m_Name: basicDuck_0
   m_TagString: Untagged
@@ -93,7 +92,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.35, y: 0.4}
   m_EdgeRadius: 0
---- !u!82 &82315533146955282
+--- !u!82 &82398247033270388
 AudioSource:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -102,7 +101,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 09781ae15790e694bb150f277b407366, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 3dfa3cb94c2d03742aba3590364eea8c, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -229,17 +228,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 1935077422711484, guid: edce486f5c14da540a74848d58ad8a83, type: 2}
---- !u!114 &114672238711114428
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1768652806446990}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d9cd107e09da2a47aa1ac875413318b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &212639518073914570
 SpriteRenderer:
   m_ObjectHideFlags: 1

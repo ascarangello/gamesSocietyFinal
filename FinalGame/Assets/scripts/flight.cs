@@ -11,6 +11,7 @@ public class flight : MonoBehaviour {
     public float speed;
     private float randomX;
     private float randomY;
+
     private BoxCollider2D bc;
 
 	// Use this for initialization
@@ -22,10 +23,9 @@ public class flight : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
         if (Time.time >= tChange)
         {
-            randomX = Random.Range(-2.0f, 2.0f); // with float parameters, a random float
+			randomX = Random.Range(-2.0f, 2.0f); // with float parameters, a random float
             randomY = Random.Range(-2.0f, 2.0f); //  between -2.0 and 2.0 is returned
                                                // set a random interval between 0.5 and 1.5
             tChange = Time.time + Random.Range(0.5f, 1.5f);
@@ -38,8 +38,11 @@ public class flight : MonoBehaviour {
         }
         if (transform.position.y >= maxY || transform.position.y <= minY)
         {
+			soundsplease.PlaySound ("duck Quack 1");
             randomY = -randomY;
         }
+
+
         Vector2 pos = transform.position;
         // make sure the position is inside the borders
         pos.x = Mathf.Clamp(transform.position.x, minX, maxX);

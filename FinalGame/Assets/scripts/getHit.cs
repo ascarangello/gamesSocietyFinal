@@ -7,7 +7,6 @@ public class getHit : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		
 	}
 	
 	// Update is called once per frame
@@ -19,6 +18,7 @@ public class getHit : MonoBehaviour {
     {
         if(collision.gameObject.name == "bullet 1(Clone)")
         {
+			soundsplease.PlaySound ("angry duck death");
             GameObject.Destroy(gameObject);
         }
     }
