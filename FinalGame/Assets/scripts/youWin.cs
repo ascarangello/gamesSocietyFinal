@@ -3,30 +3,25 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class killCounter : MonoBehaviour
+public class youWin : MonoBehaviour
 {
 
     public Text myText;
-    public static int start = 0;
-    public int numToWin;
+    public static bool isWin;
 
     // Use this for initialization
     void Start()
     {
-        numToWin = 3;
         myText = GetComponent<Text>();
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (!youWin.isWin)
+        if (isWin)
         {
-            myText.text = "Score: " + start;
-        }
-        if(start >= numToWin)
-        {
-            youWin.isWin = true;
+            myText.text = "You Win!";
         }
     }
 }

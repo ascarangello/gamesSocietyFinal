@@ -52,7 +52,7 @@ public class shooting : MonoBehaviour {
     {
         canShoot = false;
         yield return new WaitForSeconds(cooldown);
-        if (ammo > 0)
+        if (ammo > 0 && !youWin.isWin)
         {
             canShoot = true;
         }
