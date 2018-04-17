@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -19,6 +19,7 @@ public class getHit : MonoBehaviour {
         {
             soundsplease.PlaySound ("angry duck death");
             GameObject.Destroy(gameObject);
+            killCounter.start += 1;
             
         }
     }
