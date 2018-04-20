@@ -199,12 +199,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9cb01048e12c0544a1fa03837410407, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxX: 6.32
-  minX: -6.26
+  maxX: 9
+  minX: -9
   minY: -2.82
   maxY: 2.87
   speed: 1
-  player: {fileID: 0}
 --- !u!114 &114478592746730022
 MonoBehaviour:
   m_ObjectHideFlags: 1

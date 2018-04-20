@@ -11,8 +11,6 @@ public class flight : MonoBehaviour {
     public float speed;
     private float randomX;
     private float randomY;
-    public GameObject player;
-
     private BoxCollider2D bc;
 
 	// Use this for initialization

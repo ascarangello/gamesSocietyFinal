@@ -6,13 +6,19 @@ public class controller : MonoBehaviour {
     private Rigidbody2D rb;
     Animator animate;
     public GameObject floor;
+    public GameObject duck;
     public float speed;
     public float jumpHeight;
+    private Collider2D floorCollider;
+    private Collider2D thisCollider;
+    public bool touchingDuck;
 
 	// Use this for initialization
 	void Start () {
         rb = GetComponent<Rigidbody2D>();
         animate = gameObject.GetComponent<Animator>();
+        floorCollider = floor.GetComponent<Collider2D>();
+        thisCollider = this.GetComponent<Collider2D>();
 	}
 
     // Update is called once per frame
@@ -21,12 +27,13 @@ public class controller : MonoBehaviour {
         float y = 0;
        
             
-        if(Input.GetKeyDown("space") && Mathf.Abs(rb.position.y - floor.transform.position.y) < 1.1) 
+        if(Input.GetKeyDown("space") && (thisCollider.IsTouching(floorCollider) || touchingDuck))  
         {
 
             rb.velocity = new Vector2(x, jumpHeight);
       
         }
+        
 
         this.transform.rotation = new Quaternion(0, 0, 0, 1);
 
@@ -51,6 +58,7 @@ public class controller : MonoBehaviour {
             this.Flip();
         }
 
+
     }
 
     void Flip()
@@ -58,5 +66,22 @@ public class controller : MonoBehaviour {
         Vector3 theScale = transform.localScale;
         theScale.x *= -1;
         transform.localScale = theScale;
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Duck")
+        {
+            touchingDuck = true;
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Duck")
+        {
+            touchingDuck = false;
+        }
+
     }
 }

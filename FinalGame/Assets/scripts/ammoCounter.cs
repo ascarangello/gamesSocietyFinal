@@ -18,5 +18,9 @@ public class ammoCounter : MonoBehaviour {
 	void Update () {
         ammo = player.GetComponent<shooting>().ammo;
         myText.text = "Ammo: " + ammo.ToString();
+        if(ammo == 0 && !youWin.isWin)
+        {
+            youLose.isLose = true;
+        }
 	}
 }
