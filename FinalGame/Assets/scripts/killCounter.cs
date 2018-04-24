@@ -13,6 +13,7 @@ public class killCounter : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        start = 0;
         myText = GetComponent<Text>();
     }
 
