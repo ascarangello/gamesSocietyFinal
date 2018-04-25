@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class shooting : MonoBehaviour {
     Animator animate;
@@ -24,9 +25,9 @@ public class shooting : MonoBehaviour {
             canShoot = false;
         }
 
-        if(Input.GetKeyDown(KeyCode.Z) && canShoot && ammo > 0)
+        if(Input.GetKeyDown(KeyCode.Z) && canShoot && ammo > 0 && SceneManager.GetActiveScene().buildIndex == 0) 
         {
-           
+            cooldown = 1.25f;  
 			soundsplease.PlaySound ("HUnting Rifle");
             animate.SetTrigger("isShooting");
             Vector2 bullVector = new Vector2(transform.position.x + offset.x * transform.localScale.x, transform.position.y + offset.y);
@@ -39,8 +40,24 @@ public class shooting : MonoBehaviour {
            
 
         }
-        
-        
+
+        if (Input.GetKey(KeyCode.Z) && canShoot && ammo > 0 && SceneManager.GetActiveScene().buildIndex == 1)
+        {
+            cooldown = 0f;
+            soundsplease.PlaySound("HUnting Rifle");
+            animate.SetTrigger("isShooting");
+            Vector2 bullVector = new Vector2(transform.position.x + offset.x * transform.localScale.x, transform.position.y + offset.y);
+            GameObject go = Instantiate(bullet, bullVector,
+                 Quaternion.identity);
+
+            go.GetComponent<Rigidbody2D>().velocity = new Vector2(vel.x * transform.localScale.x, vel.y);
+            StartCoroutine(CanShoot());
+            ammo--;
+
+
+        }
+
+
 
 
 

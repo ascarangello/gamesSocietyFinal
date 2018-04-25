@@ -22,11 +22,12 @@ public class youWin : MonoBehaviour
     {
         if (isWin)
         {
-            myText.text = "You Win!";
-            isWin = false;
-
-            SceneManager.LoadScene("level2");
-
+            myText.text = "You Win! Click anywhere to continue";
+            if(Input.GetMouseButtonDown(0)) {
+                int nextLevel = SceneManager.GetActiveScene().buildIndex + 1;
+                SceneManager.LoadScene(nextLevel);
+                isWin = false;
+            }
         }
     }
 }

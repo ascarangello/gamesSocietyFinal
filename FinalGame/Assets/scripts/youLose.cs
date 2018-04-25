@@ -12,6 +12,7 @@ public class youLose : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        isLose = false;
         myText = GetComponent<Text>();
 
     }
