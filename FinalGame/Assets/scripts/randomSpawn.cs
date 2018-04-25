@@ -50,7 +50,7 @@ public class randomSpawn : MonoBehaviour {
 
     void checkSpawn()
     {
-        if(numSpawned >= maxToSpawn)
+        if(numSpawned >= maxToSpawn || youWin.isWin)
         {
             canSpawn = false;
         }

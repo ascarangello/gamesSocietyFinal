@@ -13,6 +13,7 @@ public class youWin : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        isWin = false;
         myText = GetComponent<Text>();
 
     }

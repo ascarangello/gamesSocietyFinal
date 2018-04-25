@@ -41,7 +41,7 @@ public class shooting : MonoBehaviour {
 
         }
 
-        if (Input.GetKey(KeyCode.Z) && canShoot && ammo > 0 && SceneManager.GetActiveScene().buildIndex == 1)
+        if (Input.GetKey(KeyCode.Z) && canShoot && ammo > 0 && SceneManager.GetActiveScene().buildIndex == 2)
         {
             cooldown = 0f;
             soundsplease.PlaySound("HUnting Rifle");

@@ -1017,12 +1017,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2932e3e0c490cff4d9b6d47f919e616e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  max: 4
+  max: 2
   min: 1
   minX: -11
   minY: -3.5
   numSpawned: 0
-  maxToSpawn: 3
+  maxToSpawn: 10
   toBeSpawned: {fileID: 1768652806446990, guid: 6a6e806cdc3b58a4ba8534d2d256a9c0,
     type: 2}
 --- !u!1 &719179567
@@ -1533,7 +1533,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myText: {fileID: 1445298371}
-  numToWin: 5
+  numToWin: 15
 --- !u!114 &1445298371
 MonoBehaviour:
   m_ObjectHideFlags: 0
